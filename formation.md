@@ -14,26 +14,30 @@ SSP Cloud allows users to deploy cloud-based workspaces easily, without the hass
 
 ## Which materials should be used for Trainings?
 
-When designing a data science training program, several formats can be considered, each with distinct advantages and limitations:
+When designing effective training materials, it’s crucial to select formats that engage learners and enhance comprehension. Even though PDFs, slide decks, and videos all offer valuable ways to present information, we will focus on interactive environments as they are ideal for practical training. Interactive environments allow learners to apply concepts immediately, test code in real time, and actively participate in their learning journey which promotes deeper understanding and skill retention. 
 
-- **Static PDFs and Slide Decks**: These formats are useful for delivering structured, concise theoretical content. **Advantages** include ease of distribution and low technical requirements, making them suitable for foundational material. **Inconveniences**: Lack interactivity and hands-on engagement, which are critical in data science training.
+In the following, we'll compare different interactive environments according the language used. Will also be shown a way do deploy a static site on the platform using quarto. 
 
-- **Video Tutorials**: Videos offer engaging, visual explanations, which are helpful for complex concepts. **Advantages**: They can simulate a classroom environment with step-by-step guidance. **Inconveniences**: Videos can become outdated quickly, and learners cannot directly interact with code or data, limiting experiential learning.
+### WIP - Deploy a static site using quarto - WIP
 
-- **Interactive Websites**: Platforms like Codecademy allow learners to work with embedded code exercises and provide immediate feedback. **Advantages**: They are highly engaging and often adaptive to learners' progress. **Inconveniences**: They may require paid access and are harder to customize with specific datasets or unique content.
+### Using Python
+
+In python, Jupyter Notebooks stand out as the go-to choice. With support for rich media, widgets, and numerous extensions, Jupyter allows the integration of interactive graphs, data tables, and even forms for exercises. 
+
+
+### Using R
+
+For R, we can either use Rmarkdown Notebooks or LearnR which offers interactive tutorials embedded within R Markdown documents. However, even if learnR allows to generate interactive elements such as quizzes making it ideal for beginner tutorials, it requires the deployment of a Shiny server which can be costly. Moreover, in learnR celle do not communicate accross the entire environment hence defininf global variables or managing state becomes challenging. This restriction limits the effectiveness of learnr for complex tutorials where a connected, evolving state is necessary to build on previous steps
+
+
+Overall, while learnR provides an interactive environment for R that’s suitable for simple exercises, Rmarkdown Notebooks offer a more robust, flexible, and widely-used solution. For R, traditional R Markdown or local interactive sessions are often more practical for comprehensive training sessions. This is why, for sophisticated training materials that require smooth progression and state management, notebooks remains the preferred choice for Python or R tutorials.
+
+
 
 - **Jupyter Notebooks**: Notebooks combine explanation, code, and visualization in one interactive document, ideal for hands-on learning in data science. **Advantages**: Customizable, with interactive code cells, exercises, and immediate visualization of results, notebooks allow for experimentation directly within the learning material. **Inconveniences**: Require a setup (e.g., Jupyter or cloud platforms) and may be unfamiliar for absolute beginners.
 
 **Conclusion**: While each format has strengths, **Jupyter Notebooks** offer a balanced, interactive approach for self-paced data science training, fostering active learning and practical experience.
 
-| Format               | Advantages                                                                                   | Inconveniences                                                                            |
-|----------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| **Static PDFs and Slide Decks** | Easy distribution; suitable for foundational or theory-heavy content.                  | Lacks interactivity and practical application, limiting hands-on engagement.              |
-| **Video Tutorials**  | Visual and engaging; provides guided, step-by-step explanations.                            | Cannot be interacted with directly; quickly outdated and often unsuitable for experimentation; hard to maintain. |
-| **Interactive Websites** | Highly engaging; provides immediate feedback and adaptability based on learner progress. | Limited customization for specific content                      |
-| **Jupyter Notebooks** | Interactive; combines explanation with live code, visualizations, and hands-on practice.     | Requires initial setup (cloud or local) and may be unfamiliar for beginners.              |
-
-**Conclusion**: **Jupyter Notebooks** are often the best choice for data science training, combining interactivity and practical learning in a flexible format.
 
 
 ## Why use of Notebooks ? (TO DO : delete)
