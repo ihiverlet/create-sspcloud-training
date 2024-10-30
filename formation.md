@@ -16,51 +16,31 @@ SSP Cloud allows users to deploy cloud-based workspaces easily, without the hass
 
 When designing effective training materials, it’s crucial to select formats that engage learners and enhance comprehension. Even though PDFs, slide decks, and videos all offer valuable ways to present information, we will focus on interactive environments as they are ideal for practical training. Interactive environments allow learners to apply concepts immediately, test code in real time, and actively participate in their learning journey which promotes deeper understanding and skill retention. 
 
-In the following, we'll compare different interactive environments according the language used. Will also be shown a way do deploy a static site on the platform using quarto. 
+In the following, we'll compare different interactive environments according to the language used. Will also be shown a way to deploy a static site on the platform using quarto. 
 
-### WIP - Deploy a static site using quarto - WIP
+### 🚧 WIP - Deploy a static site using quarto - WIP 
+Here will lie some explanation on how to deploy a static site using quarto and CI to automate its deployment.
+### End of WIP 🚧
 
-### Using Python
+### Using Python 
 
-In python, Jupyter Notebooks stand out as the go-to choice. With support for rich media, widgets, and numerous extensions, Jupyter allows the integration of interactive graphs, data tables, and even forms for exercises. 
-
-
-### Using R
-
-For R, we can either use Rmarkdown Notebooks or LearnR which offers interactive tutorials embedded within R Markdown documents. However, even if learnR allows to generate interactive elements such as quizzes making it ideal for beginner tutorials, it requires the deployment of a Shiny server which can be costly. Moreover, in learnR celle do not communicate accross the entire environment hence defininf global variables or managing state becomes challenging. This restriction limits the effectiveness of learnr for complex tutorials where a connected, evolving state is necessary to build on previous steps
+🐍 In python, Jupyter Notebooks, also available in Vscode, stand out as the go-to choice. With support for rich media, widgets, and numerous extensions, it allows the integration of interactive graphs, data tables, and even forms for exercises.
 
 
-Overall, while learnR provides an interactive environment for R that’s suitable for simple exercises, Rmarkdown Notebooks offer a more robust, flexible, and widely-used solution. For R, traditional R Markdown or local interactive sessions are often more practical for comprehensive training sessions. This is why, for sophisticated training materials that require smooth progression and state management, notebooks remains the preferred choice for Python or R tutorials.
+### Using R 
 
+®️ In R, we can either use Rmarkdown Notebooks or LearnR which offers interactive tutorials embedded within R Markdown documents. Both of them combine explanation, code and visualization in an interactive document. However, even if learnR allows to generate interactive and more complexe elements such as quizzes making it ideal for beginner tutorials, it requires the deployment of a Shiny server which can be costly. Moreover, in learnR cells do not communicate across the entire environment hence defining global variables or managing state becomes challenging. This restriction limits the effectiveness of learnr for complex tutorials where a connected, evolving state is necessary to build on previous steps.
 
-
-- **Jupyter Notebooks**: Notebooks combine explanation, code, and visualization in one interactive document, ideal for hands-on learning in data science. **Advantages**: Customizable, with interactive code cells, exercises, and immediate visualization of results, notebooks allow for experimentation directly within the learning material. **Inconveniences**: Require a setup (e.g., Jupyter or cloud platforms) and may be unfamiliar for absolute beginners.
-
-**Conclusion**: While each format has strengths, **Jupyter Notebooks** offer a balanced, interactive approach for self-paced data science training, fostering active learning and practical experience.
-
-
-
-## Why use of Notebooks ? (TO DO : delete)
-Notebooks have become a standard tool for education in programming and data science due to their versatility and interactive nature. Here’s why:
-
-1. **Code and Explanation Side by Side**: Notebooks allow you to mix live code, text, images, and visualizations. Instructors can explain concepts in markdown cells while learners can run code interactively in the same document.
-
-2. **Step-by-Step Learning**: Learners can execute code in small chunks and see the results immediately. This incremental approach is excellent for building understanding, as students can experiment and tweak code without re-running entire programs.
-
-3. **Self-Paced and Interactive**: Notebooks encourage exploration and experimentation, allowing learners to go at their own pace. They can run the examples provided, then modify the code to see how changes affect the output, enhancing engagement.
-
-4. **Reproducibility**: Notebooks are ideal for documenting full workflows, ensuring that learners can reproduce their results or revisit previous exercises without issues. This is crucial for both learning and research purposes.
-
-5. **Integration with Popular Tools**: Notebooks supports multiple languages (Python, R, Julia, etc.), making it a flexible tool for teaching different programming languages and workflows. In data science, Jupyter easily integrates with libraries such as Pandas, NumPy, and Matplotlib for data manipulation and visualization.
-
+Overall, while learnR provides an interactive environment for R that’s suitable for simple exercises, Rmarkdown Notebooks offer a more robust, flexible, and widely-used solution. For R, traditional R Markdown or local interactive sessions are often more practical for comprehensive training sessions. 
+This is why, for sophisticated training materials that require smooth progression and state management, notebooks remains the preferred choice for Python or R tutorials.
 
 ## How to Structure an Effective Training Course with SSP Cloud notebooks
 
-1. **Clear Objectives**: Start with clear learning objectives. For example, a Python basics course could focus on data types, control structures, and basic data manipulation using libraries like Pandas.
+1. **Clear Objectives**: 👨‍🎓 Start with clear learning objectives. For example, a Python basics course could focus on data types, control structures, and basic data manipulation using libraries like Pandas.
 
 2. **Pre-configured Environment**: Create an SSP Cloud environment with all necessary libraries included see the [next paragraph in order to configure the environment](TO DO ADD LINK). This allows learners to focus on learning instead of dealing with setup problems.
 
-3. **Modular Notebooks**: Break the course into several Notebooks, each covering a key concept or topic. Each notebook should have a combination of:
+3. **Modular Notebooks**: 📚 Break the course into several Notebooks, each covering a key concept or topic. Each notebook should have a combination of:
    - **Explanatory text**: To describe the theory and concepts behind the code.
    - **Code cells**: For learners to run, modify, and experiment with.
    - **Exercises**: Challenge students with problems to solve using the concepts they’ve learned.
@@ -70,23 +50,11 @@ Notebooks have become a standard tool for education in programming and data scie
    - Notebook 2: Control flow (loops, conditionals).
    - Notebook 3: Working with files and data.
 
-4. **Step-by-Step Walkthroughs**: Each notebook should contain step-by-step instructions that learners can follow, starting with simple examples and building up to more complex exercises. Use markdown cells to explain what each piece of code does.
+4. **Step-by-Step Walkthroughs**: 👣 Each notebook should contain step-by-step instructions that learners can follow, starting with simple examples and building up to more complex exercises. Use markdown cells to explain what each piece of code does.
 
 5. **Interactive Exercises**: Include exercises at the end of each module. Encourage learners to modify the code, test different inputs, and debug any errors they encounter.
 
-6. **Visualizations and Data Exploration**: Make use of the visualization libraries to create engaging plots and graphs. This is especially useful when teaching data analysis, as it allows learners to immediately see the impact of their code on data.
-
-7. **Progressive Difficulty**: Start with basic concepts and gradually introduce more advanced topics, allowing learners to build their skills step by step. This scaffolding approach ensures that students aren’t overwhelmed but are constantly challenged.
-
-
-
-
-
-
-### TODO mettre le paragraphe suivant à un meilleur endroit.
-
-
-Please note you can display solutions for exercises in two ways: either by creating separate files - one for exercises and another one for solutions - or by embedding the solution directly within the course using the following snippet of code:
+You can display solutions for exercises in two ways: either by creating separate files - one for exercises and another one for solutions - or by embedding the solution directly within the course using the following snippet of code:
 
 ```markdown
 <details>
@@ -102,34 +70,35 @@ Content of the solution
 </details>
 ```
 
+6. **Visualizations and Data Exploration**: 🔎 Make use of the visualization libraries to create engaging plots and graphs. This is especially useful when teaching data analysis, as it allows learners to immediately see the impact of their code on data.
+
+7. **Progressive Difficulty**: 📈 Start with basic concepts and gradually introduce more advanced topics, allowing learners to build their skills step by step. This scaffolding approach ensures that students aren’t overwhelmed but are constantly challenged.
 
 
 ## Setting Up an Environment Using the SSP Cloud Platform
 
-With SSP Cloud, you have the flexibility to create a custom, shareable link that launches a pre-configured service for learners, or, for an even smoother experience, add a link directly within a training catalog or interface. These options provide two easy paths for starting a training session:
+With SSP Cloud, you have the flexibility to create a custom, shareable link that launches a pre-configured service for learners, or, for an even smoother experience, add a link directly within a training catalog. These options provide two easy paths for starting a training session:
 
-1. **Creating a Shareable Link**: Generate a link that contains all the necessary configurations for your chosen environment, and share this link with apprentices. They can then access the environment instantly, with everything they need already set up.
+- [**Creating a Shareable Link**](TO DO ADD LINK TO How the Link Works): Generate a link that contains all the necessary configurations for your chosen environment, and share this link with apprentices. They can then access the environment instantly, with everything they need already set up.
 
-2. **Embedding in a Training Catalog**: Alternatively, you can create a custom “launch” button in SSP Cloud's interface, mapped to your specific training environment. This makes it even simpler for learners to access; they just click the button to open the configured environment directly.
+- [**Embedding in a Training Catalog**](TO DO ADD A LINK TO Add your Training course on the SSP Cloud platform ): Alternatively, you can create a custom “launch” button in SSP Cloud's interface, mapped to your specific training environment. This makes it even simpler for learners to access; they just click the button to open the configured environment directly.
 
 ### How the Link Works
 
-The setup link is a powerful feature in SSP Cloud, allowing you to define all aspects of the training environment. Here’s what it can include:
-
-- **Service Selection**: Decide on the language and framework for the training. Options include **Python**, **PySpark**, or environments that use **GPU** resources, ideal for more computationally intensive tasks.
-
-- **Resource Allocation**: Define the amount of computational resources required, including memory, CPU, and storage. This ensures that the environment matches the needs of the course content, even for large data sets or intensive machine learning tasks.
-
-- **Initialization Scripts**: To ensure all learners start with the same setup, you can attach an initialization script to the link. [See here for initialization scripts examples](https://github.com/InseeFrLab/sspcloud-init-scripts). This script can:
-
-   - Clone the training repository with all relevant notebooks and materials.
-
-   - Install any necessary libraries, dependencies... so there’s nothing to install locally.
-
-By clicking the link, all learners launch the exact same environment, fully configured and ready to use. This uniformity is a huge benefit in training scenarios: everyone works with the same setup, eliminating any inconsistencies that might arise from varied installations.
+The setup link is a powerful feature in SSP Cloud, allowing you to define all aspects of the training environment. In order to get your link, feel free to use the SSP Cloud platform and configure a service. Then click on the `Copy auto launch URL` button. 
+By clicking the link, all learners launch the exact same environment, fully configured with the specified configuration and ready to use. This uniformity is a huge benefit in training scenarios: everyone works with the same setup, eliminating any inconsistencies that might arise from varied installations.
 
 
-Here's an example link:
+The link can include :
+- service selected to decide on the language and framework for the training
+- the resources to define the amount of computational resources required, including memory, CPU, and storage. This ensures that the environment matches the needs of the course content, even for intensive machine learning tasks
+- an initialization script to ensure all learners start with the same setup. [See here for initialization scripts examples](https://github.com/InseeFrLab/sspcloud-init-scripts). This script can:
+- Clone the training repository with all relevant notebooks and materials.
+- Install any necessary libraries, dependencies... so there’s nothing to install locally.
+- and many more ...
+
+
+Here's an example link: ## TODO METTRE UN LIEN AVEC UN VSCODE
 
 https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&name=python-initiation&init.personalInit=%C2%ABhttps://raw.githubusercontent.com/InseeFrLab/formation-python-initiation/main/utils/init_onyxia.sh%C2%BB&init.personalInitArgs=%C2%ABen%20fundamentals%20types-variables%C2%BB&security.allowlist.enabled=false
 
@@ -146,7 +115,7 @@ In order to add a tutorial on the [SSP Cloud dedicated place] (https://www.sspcl
 There, you'll have the possibility to define the name of your course, fill an abstract to inform the users of its content, specify the authors, the date of creation of the course, to add tags and keywords... To set an image to represent the course, the number of expected hours to follow the course and an article URL if you want to direct the users to an external resource to explain the content of the course. (TO DO ADD A PICTURE - READ + LAUNCH BUTTON) And finally give the URL to launch the preconfigured service.  🚀️
 
 
-To organize the course effectively, you can divide it into different **parts**. Use this feature to group related tutorials within a course folder, allowing learners to follow a structured, progressive format.
+To organize the course effectively, you can divide it into different parts. Use this feature to group related tutorials within a course folder, allowing learners to follow a structured, progressive format.
 
 For example, you can follow this pattern 
 
@@ -155,7 +124,7 @@ For example, you can follow this pattern
  {
         "name": {
             "fr": "Nom d'un dossier contenant des cours",
-            "en": "Name of a folder traing",
+            "en": "Name of a folder training",
         },
         "abstract": {
             "fr": "Description de ce que contient le dossier.",
@@ -209,9 +178,11 @@ For example, you can follow this pattern
 
 ```
 
-## To add somewhere - The data 📁️
+### Make your data available to everyone 📁️
 
-If your course requires data, you can make it accessible either by sharing a public link (allowing open access) or by placing the data in a "diffusion" folder within your bucket repository on the platform. This second option automatically makes the data available to all SSP Cloud users, providing seamless integration within the platform environment and consequently reduce the network traffic.
+If your course requires data, you can make it accessible either by sharing a public link (allowing open access) or by placing the data in a "diffusion" folder within your bucket on the platform. This second option automatically makes the data available to all SSP Cloud users, providing seamless integration within the platform environment and consequently reduce the network traffic.
+
+[Click here for more information](https://docs.sspcloud.fr/en/content/storage.html#sharing-data)
 
 ## Conclusion
 The SSP Cloud combined with Notebooks creates an ideal environment for teaching and learning programming or data science. The combination of instant, cloud-based environments with the interactive nature of notebooks allows for engaging, reproducible, and scalable training sessions. By leveraging these tools, educators can focus on what matters most, eg teaching and learning, without worrying about setup issues or inconsistent environments. 
