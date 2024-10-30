@@ -77,11 +77,13 @@ Content of the solution
 
 ## Setting Up an Environment Using the SSP Cloud Platform
 
-With SSP Cloud, you have the flexibility to create a custom, shareable link that launches a pre-configured service for learners, or, for an even smoother experience, add a link directly within a training catalog. These options provide two easy paths for starting a training session:
+With SSP Cloud, you have the flexibility to create a custom, shareable link that launches a pre-configured service for learners, or, for an even smoother experience, add a link directly within tutorials referential. These options provide an easy path for starting a training session.
 
-- [**Creating a Shareable Link**](TO DO ADD LINK TO How the Link Works): Generate a link that contains all the necessary configurations for your chosen environment, and share this link with apprentices. They can then access the environment instantly, with everything they need already set up.
+1. **Generate a link** that contains all the necessary configurations for your chosen environment, and share this link with apprentices. They can then access the environment instantly, with everything they need already set up.
 
-- [**Embedding in a Training Catalog**](TO DO ADD A LINK TO Add your Training course on the SSP Cloud platform ): Alternatively, you can create a custom “launch” button in SSP Cloud's interface, mapped to your specific training environment. This makes it even simpler for learners to access; they just click the button to open the configured environment directly.
+2. **Share this link** with the learners. You can create your own tutorial referential by publishing them through a GitHub repository, using a static website, or [adding them to the Tutorials Section on the SSP Cloud Platform](TO DO: ADD LINK to "Add your Training Course on the SSP Cloud Platform"). By choosing the latter, you can create a custom “launch” button within SSP Cloud's interface, mapped to your specific training environment. This makes it even easier for learners to access—just one click opens the configured environment directly.
+
+The possibilities for sharing your links are endless. Choose the one that best fits your needs! ✨
 
 ### How the Link Works
 
@@ -93,8 +95,8 @@ The link can include :
 - service selected to decide on the language and framework for the training
 - the resources to define the amount of computational resources required, including memory, CPU, and storage. This ensures that the environment matches the needs of the course content, even for intensive machine learning tasks
 - an initialization script to ensure all learners start with the same setup. [See here for initialization scripts examples](https://github.com/InseeFrLab/sspcloud-init-scripts). This script can:
-- Clone the training repository with all relevant notebooks and materials.
-- Install any necessary libraries, dependencies... so there’s nothing to install locally.
+    - Clone the training repository with all relevant notebooks and materials.
+    - Install any necessary libraries, dependencies... so there’s nothing to install locally.
 - and many more ...
 
 
@@ -102,13 +104,12 @@ Here's an example link: ## TODO METTRE UN LIEN AVEC UN VSCODE
 
 https://datalab.sspcloud.fr/launcher/ide/jupyter-python?autoLaunch=true&name=python-initiation&init.personalInit=%C2%ABhttps://raw.githubusercontent.com/InseeFrLab/formation-python-initiation/main/utils/init_onyxia.sh%C2%BB&init.personalInitArgs=%C2%ABen%20fundamentals%20types-variables%C2%BB&security.allowlist.enabled=false
 
-
 This link automatically launches a **Jupyter Notebook** environment on the sspcloud and configures it with pre-installed libraries and scripts, thanks to the `init.personalInit` argument. Note : you can change it to Vscode if you prefer.
 
 - **Predefined Content**: The link includes initialization scripts that set up a predefined training module, in this case, "Python Fundamentals: Types and Variables". All learners will start with this exact configuration.
 - **No Setup Required**: This eliminates the common issues of dependency mismatches and local installation errors, so learners can jump directly into the material.
 
-## Add your Training course on the SSP Cloud platform 
+## Publish Your Training Course in the Tutorials Section on the SSP Cloud Platform 
 
 In order to add a tutorial on the [SSP Cloud dedicated place] (https://www.sspcloud.fr/formation) you can [submit a PR on github](https://github.dev/InseeFrLab/www.sspcloud.fr/blob/main/src/lib/getHelmDatasciencePackageCount.ts).
 
